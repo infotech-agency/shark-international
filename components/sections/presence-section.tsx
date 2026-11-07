@@ -88,7 +88,7 @@ export function PresenceSection() {
     <p>{company.registeredOffice.address}</p>
 
     <a
-      className="text-link"
+      className="button navy"
       href={company.phoneHref}
     >
       {company.phone}

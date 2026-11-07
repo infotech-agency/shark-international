@@ -85,8 +85,9 @@ export function HeroSection() {
   <span style={{ color: 'inherit' }}>London, UK</span>
   <span aria-hidden="true" style={{ color: '#D9B66F' }}>·</span>
 
-  <span style={{ color: '#E8D6AE' }}>Founded in 2026</span>
+
 </p>
+<p className='my-2'>Sourcing and trading essential products for agricultural, industrial and manufacturing requirements.</p>
           
         </div>
       </div>

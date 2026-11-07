@@ -26,7 +26,7 @@
 // //           </h3>
 // //           <p>Managing Director</p>
 // //           <small>New Delhi, India</small>
-// //           <a className="text-link" href={'mailto:' + company.email}>
+// //           <a className="button navy" href={'mailto:' + company.email}>
 // //             Connect with Aditya <ArrowUpRight size={17} />
 // //           </a>
 // //         </div>
@@ -105,7 +105,7 @@
 //           <p>Managing Director</p>
 //           <small>New Delhi, India</small>
 
-//           <a className="text-link" href={`mailto:${company.email}`}>
+//           <a className="button navy" href={`mailto:${company.email}`}>
 //             Connect with Aditya
 //             <ArrowUpRight size={17} />
 //           </a>
@@ -193,7 +193,7 @@ export function LeadershipSection() {
           <p>Managing Director</p>
           <small>New Delhi, India</small>
 
-          <a className="text-link" href={`mailto:${company.email}`}>
+          <a className="button navy" href={`mailto:${company.email}`}>
             Connect with Aditya
             <ArrowUpRight size={17} />
           </a>

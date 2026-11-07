@@ -94,7 +94,7 @@ h4 {
   font-size: 21px;
   line-height: 1.65;
 }
-.text-link {
+.button navy {
   font-size: 14px;
 }
 .facts > p {
@@ -170,7 +170,7 @@ h4 {
   font-size: 10px;
   line-height: 1.8;
 }
-.director-name .text-link {
+.director-name .button navy {
   font-size: 13px;
 }
 .team p,
@@ -190,7 +190,7 @@ h4 {
 .office h3 small {
   font-size: 13px;
 }
-.office .text-link {
+.office .button navy {
   font-size: 13px;
 }
 .office-title > span {
@@ -416,7 +416,7 @@ footer h4 {
   .about-image {
     margin-top: 25px;
   }
-  .text-link {
+  .button navy {
     font-size: 13px;
   }
   .strengths > div {
@@ -493,7 +493,7 @@ footer h4 {
   .office h3 small {
     font-size: 12px;
   }
-  .office .text-link {
+  .office .button navy {
     font-size: 12px;
   }
   .contact-copy h2,

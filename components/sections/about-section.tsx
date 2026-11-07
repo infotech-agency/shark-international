@@ -27,7 +27,7 @@ export function AboutSection() {
   we connect suppliers, manufacturers and buyers through strategic
   sourcing, market understanding and a practical approach to trade.
 </p>
-        <a className="text-link" href="#why-shark">
+        <a className="button navy" href="#why-shark">
           Discover our approach <ArrowUpRight size={18} />
         </a>
       </div>
@@ -52,7 +52,7 @@ export function AboutSection() {
         {[
          [
 
-  ['06', 'Commodity Sectors'],
+  ['06 ', ' Commodity Sectors'],
 ]
         ].map(([n, l]) => (
           <div key={l}>

@@ -15,7 +15,7 @@ export function OfficeCard({ index }: { index: number }) {
       </div>
       <p>{office.address}</p>
       <a
-        className="text-link"
+        className="button navy"
         target="_blank"
         rel="noreferrer"
         href={

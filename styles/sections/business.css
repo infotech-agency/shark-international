@@ -107,7 +107,7 @@
   color: #536172;
   margin-bottom: 25px;
 }
-.sector-feature-copy .text-link {
+.sector-feature-copy .button navy {
   font-size: 14px;
   align-self: flex-start;
 }
@@ -209,7 +209,7 @@
   .sector-feature-copy > p:not(.eyebrow) {
     font-size: 15px;
   }
-  .sector-feature-copy .text-link {
+  .sector-feature-copy .button navy {
     font-size: 13px;
   }
   .sector-controls {

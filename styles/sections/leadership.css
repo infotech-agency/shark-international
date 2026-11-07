@@ -51,7 +51,7 @@
   font-size: 13px;
   color: var(--grey);
 }
-.director-name .text-link {
+.director-name .button navy {
   display: flex;
   font-size: 12px;
   margin-top: 22px;
@@ -156,7 +156,7 @@
   .director-name > p:not(.eyebrow) {
     font-size: 13px;
   }
-  .director-name .text-link {
+  .director-name .button navy {
     margin-top: 13px;
     font-size: 12px;
   }

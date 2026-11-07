@@ -147,7 +147,7 @@ img {
   background: var(--gold);
   color: #10203c;
 }
-.text-link {
+.button navy {
   display: inline-flex;
   align-items: center;
   gap: 20px;
@@ -157,7 +157,7 @@ img {
   padding: 12px 0;
   position: relative;
 }
-.text-link:after {
+.button navy:after {
   content: '';
   height: 1px;
   position: absolute;
@@ -170,13 +170,13 @@ img {
   transform-origin: left;
   transition: transform 0.4s;
 }
-.text-link:hover:after {
+.button navy:hover:after {
   transform: scaleX(1);
 }
-.text-link svg {
+.button navy svg {
   transition: transform 0.3s;
 }
-.text-link:hover svg {
+.button navy:hover svg {
   transform: translate(3px, -3px);
 }
 .section-head {
@@ -274,7 +274,7 @@ img {
   .eyebrow > span {
     width: 20px;
   }
-  .text-link {
+  .button navy {
     font-size: 12px;
   }
   .section-head {
