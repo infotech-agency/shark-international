@@ -1,0 +1,20 @@
+@import '../styles/fonts.css';
+@import 'tailwindcss';
+
+/* Design tokens and shared styles first, reduced-motion rules last. */
+@import '../styles/base.css';
+@import '../styles/layout/header.css';
+@import '../styles/sections/hero.css';
+@import '../styles/sections/about.css';
+@import '../styles/sections/business.css';
+@import '../styles/sections/why-shark.css';
+@import '../styles/sections/leadership.css';
+@import '../styles/sections/presence.css';
+@import '../styles/sections/contact.css';
+@import '../styles/sections/closing.css';
+@import '../styles/layout/footer.css';
+@import '../styles/layout/floating-contact.css';
+@import '../styles/shared/dialog.css';
+@import '../styles/motion.css';
+
+@import '../styles/readability.css';

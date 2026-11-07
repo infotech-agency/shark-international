@@ -1,0 +1,241 @@
+/* sections/about styles, including responsive overrides. */
+
+.about {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 45px 90px;
+}
+.about-copy > p {
+  font-size: 16px;
+  color: var(--grey);
+}
+.about-copy .lead {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+.about-image {
+  position: relative;
+  min-height: 370px;
+  overflow: hidden;
+}
+.about-image img {
+  height: 100%;
+  width: 100%;
+  max-height: 420px;
+  object-position: 55% center;
+  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.about-image:hover img {
+  transform: scale(1.025);
+}
+.about-image:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #06182fd9, transparent 75%);
+}
+.image-caption {
+  position: absolute;
+  left: 33px;
+  bottom: 32px;
+  color: white;
+  font: 400 32px/1.3 Inter;
+  z-index: 2;
+  letter-spacing: -0.8px;
+}
+.image-caption > .eyebrow {
+  font: 500 8px Inter;
+  letter-spacing: 1.8px;
+  margin-bottom: 16px;
+  color: #d4be87;
+}
+.media-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background: var(--gold);
+  display: grid;
+  place-items: center;
+  color: var(--navy);
+  z-index: 2;
+}
+.photo-index {
+  position: absolute;
+  bottom: 35px;
+  right: 15px;
+  z-index: 2;
+  writing-mode: vertical-rl;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #fff8;
+}
+.facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+  align-content: center;
+}
+.facts > div {
+  position: relative;
+  padding: 20px 0 22px;
+  border-bottom: 1px solid #dce1e6;
+}
+.facts > div:first-child {
+  grid-column: 1/-1;
+}
+.facts strong {
+  display: block;
+  font: 400 62px/1.1 Inter;
+  letter-spacing: -3px;
+  color: var(--navy);
+}
+.facts > div:first-child strong {
+  font-size: 70px;
+}
+.facts > div > span {
+  font-size: 13px;
+  color: var(--grey);
+  display: block;
+  margin-top: 8px;
+}
+.facts svg {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  color: #a58b50;
+}
+.facts > p {
+  grid-column: 1/-1;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--grey);
+  margin: 25px 0 0;
+}
+.facts > p > span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1.7px;
+  color: var(--navy);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+@media (max-width: 1150px) {
+  .about {
+    gap: 40px 55px;
+  }
+}
+@media (max-width: 900px) {
+  .about {
+    gap: 35px;
+  }
+  .about-image {
+    min-height: 330px;
+  }
+  .image-caption {
+    font-size: 27px;
+    left: 25px;
+    bottom: 25px;
+  }
+  .facts strong {
+    font-size: 52px;
+  }
+  .facts > div:first-child strong {
+    font-size: 60px;
+  }
+  .facts {
+    gap: 0 25px;
+  }
+  .facts > div {
+    padding-top: 10px;
+  }
+  .facts > p {
+    font-size: 15px;
+  }
+  .about-copy .lead {
+    font-size: 17px;
+  }
+  .about-copy > p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .about {
+    display: block;
+  }
+  .about-heading h2 {
+    font-size: 38px;
+  }
+  .about-copy {
+    margin-top: 28px;
+  }
+  .about-copy .lead {
+    font-size: 17px;
+  }
+  .about-copy > p {
+    font-size: 15px;
+  }
+  .about-image {
+    min-height: 300px;
+    margin-top: 28px;
+    aspect-ratio: 1.1;
+  }
+  .about-image > img {
+    height: 100%;
+    max-height: none;
+    object-position: center;
+  }
+  .image-caption {
+    font-size: 28px;
+    left: 23px;
+    bottom: 25px;
+  }
+  .image-caption > .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+  .media-corner {
+    width: 63px;
+    height: 63px;
+  }
+  .media-corner > svg {
+    width: 28px;
+  }
+  .photo-index {
+    right: 11px;
+    font-size: 11px;
+  }
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+    gap: 25px 15px;
+  }
+  .facts > div,
+  .facts > div:first-child {
+    grid-column: auto;
+    padding: 10px 0 20px;
+  }
+  .facts strong,
+  .facts > div:first-child strong {
+    font-size: 37px;
+    letter-spacing: -1.8px;
+  }
+  .facts > div > span {
+    font-size: 12px;
+    margin-top: 7px;
+  }
+  .facts svg {
+    display: none;
+  }
+  .facts > p {
+    margin-top: 0;
+    font-size: 15px;
+  }
+  .facts > p > span {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,43 @@
+/* layout/floating-contact styles, including responsive overrides. */
+.floating {
+  position: fixed;
+  right: 18px;
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.floating a {
+  width: 43px;
+  height: 43px;
+  background: #fff;
+  color: var(--navy);
+  border: 1px solid #d2d9df;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 3px 15px #0001;
+  transition: transform 0.3s;
+}
+.floating a:hover {
+  transform: translateY(-3px);
+}
+.floating a:first-child {
+  background: #176944;
+  color: white;
+  border-color: #176944;
+}
+@media (max-width: 600px) {
+  .floating {
+    right: 11px;
+    bottom: 12px;
+  }
+  .floating a {
+    width: 37px;
+    height: 37px;
+  }
+  .floating svg {
+    width: 19px;
+  }
+}

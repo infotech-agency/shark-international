@@ -1,0 +1,190 @@
+/* sections/leadership styles, including responsive overrides. */
+
+.director {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  border-top: 1px solid #d9dfe6;
+  border-bottom: 1px solid #d9dfe6;
+  padding: 50px 0;
+  gap: 90px;
+  position: relative;
+}
+.director:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  height: 2px;
+  width: 70px;
+  background: var(--gold);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 1s 0.2s;
+}
+.section-seen .director:before {
+  transform: scaleX(1);
+}
+.quote-mark {
+  display: block;
+  font: 125px/0.65 Georgia;
+  color: #c9a24b;
+  margin-bottom: 27px;
+}
+.director-name > .eyebrow {
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  color: var(--grey);
+  margin-bottom: 20px;
+}
+.director-name h3 {
+  font-size: 32px;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+  color: var(--navy);
+}
+.director-name > p:not(.eyebrow) {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.director-name small,
+.team small {
+  font-size: 13px;
+  color: var(--grey);
+}
+.director-name .text-link {
+  display: flex;
+  font-size: 12px;
+  margin-top: 22px;
+}
+.director blockquote {
+  font: 400 23px/1.7 Inter;
+  color: var(--navy);
+  margin: 0;
+  align-self: center;
+  letter-spacing: -0.35px;
+}
+.director blockquote em {
+  font-style: normal;
+  color: #987b3d;
+}
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 35px;
+  padding-top: 35px;
+}
+.team-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--grey);
+  margin-bottom: 18px;
+}
+.team h3 {
+  font-size: 21px;
+  color: var(--navy);
+  margin-bottom: 9px;
+}
+.team p {
+  font-size: 15px;
+  margin-bottom: 0;
+  color: var(--grey);
+}
+.team-note {
+  font: 500 22px/1.5 Inter;
+  color: var(--navy);
+  padding-left: 30px;
+  border-left: 1px solid #d9dfe6;
+}
+.team-note > svg {
+  color: #b99a55;
+  margin-bottom: 13px;
+}
+.team-note > span {
+  color: #8b7445;
+}
+@media (max-width: 1150px) {
+  .director {
+    gap: 50px;
+  }
+  .director blockquote {
+    font-size: 21px;
+  }
+}
+@media (max-width: 900px) {
+  .director {
+    gap: 35px;
+    grid-template-columns: 1fr 1.35fr;
+  }
+  .director blockquote {
+    font-size: 19px;
+  }
+  .director-name h3 {
+    font-size: 28px;
+  }
+  .director-name > .eyebrow {
+    font-size: 11px;
+  }
+  .team h3 {
+    font-size: 19px;
+  }
+  .team-note {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .director {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 35px 0;
+  }
+  .quote-mark {
+    font-size: 100px;
+    margin-bottom: 20px;
+  }
+  .director-name > .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.2px;
+  }
+  .director-name h3 {
+    font-size: 28px;
+  }
+  .director-name h3 > br {
+    display: none;
+  }
+  .director-name > p:not(.eyebrow) {
+    font-size: 13px;
+  }
+  .director-name .text-link {
+    margin-top: 13px;
+    font-size: 12px;
+  }
+  .director blockquote {
+    font-size: 19px;
+    line-height: 1.8;
+  }
+  .team {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding-top: 30px;
+  }
+  .team-label {
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+  .team h3 {
+    font-size: 18px;
+  }
+  .team p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .team small {
+    font-size: 12px;
+  }
+  .team-note {
+    display: none;
+  }
+}

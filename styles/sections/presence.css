@@ -1,0 +1,200 @@
+/* sections/presence styles, including responsive overrides. */
+
+.presence {
+  background: #f3f5f6;
+}
+.presence-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 50px;
+  align-items: stretch;
+}
+.map-panel {
+  position: relative;
+  background: var(--midnight);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 390px;
+}
+.map-panel svg {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.map-panel .land {
+  fill: #25415b;
+  stroke: #365068;
+  stroke-width: 0.4;
+}
+.map-panel circle {
+  fill: var(--gold);
+  stroke: #eed7a3;
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.map-panel.revealed circle {
+  animation: map-pin-in 0.6s 0.6s both;
+}
+.connection {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  stroke-dasharray: 90;
+  stroke-dashoffset: 90;
+  transition: stroke-dashoffset 1.8s 0.5s;
+}
+.section-seen .connection {
+  stroke-dashoffset: 0;
+}
+.map-panel text {
+  font: 600 9px Inter;
+  fill: #eddfc2;
+  letter-spacing: 1px;
+}
+.map-panel > p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #92a5bd;
+  position: relative;
+  padding: 10px 10px 13px;
+  margin: 0;
+}
+.map-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#ffffff05 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff05 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+.map-coordinate {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 22px;
+  color: #8193aa;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+}
+.office-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.office {
+  padding: 25px 0;
+  border-bottom: 1px solid #d3dbe4;
+}
+.office:first-child {
+  padding-top: 0;
+}
+.office-title {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.office-title > span {
+  font-size: 13px;
+  color: #a18443;
+  padding-top: 5px;
+}
+.office-title > svg {
+  margin-left: auto;
+  color: #8795a3;
+  margin-top: 5px;
+  transition: transform 0.4s;
+}
+.office:hover .office-title > svg {
+  transform: translate(3px, -3px);
+}
+.office h3 {
+  font-size: 27px;
+  color: var(--navy);
+  margin-bottom: 15px;
+  letter-spacing: -0.8px;
+}
+.office h3 small {
+  display: block;
+  font: 10px Inter;
+  color: var(--grey);
+  margin-top: 9px;
+  letter-spacing: 0;
+}
+.office p {
+  font-size: 15px;
+  color: var(--grey);
+  max-width: 310px;
+  margin: 0 0 4px 34px;
+}
+.office .text-link {
+  margin-left: 34px;
+  font-size: 12px;
+}
+@media (max-width: 900px) {
+  .presence-layout {
+    gap: 30px;
+    grid-template-columns: 1.2fr 1fr;
+  }
+  .map-panel {
+    min-height: 345px;
+  }
+  .office h3 {
+    font-size: 23px;
+  }
+  .office p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 600px) {
+  .presence-layout {
+    display: block;
+  }
+  .map-panel {
+    min-height: 280px;
+    margin-bottom: 30px;
+  }
+  .map-panel svg {
+    height: auto;
+    min-height: 195px;
+  }
+  .map-coordinate {
+    font-size: 11px;
+    padding: 0 17px;
+  }
+  .map-panel > p {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    padding-top: 13px;
+  }
+  .office {
+    padding: 23px 0;
+  }
+  .office:first-child {
+    padding-top: 0;
+  }
+  .office-title {
+    gap: 18px;
+  }
+  .office h3 {
+    font-size: 26px;
+  }
+  .office h3 > small {
+    font-size: 12px;
+  }
+  .office p {
+    font-size: 15px;
+    margin-left: 31px;
+    max-width: 290px;
+  }
+  .office .text-link {
+    margin-left: 31px;
+    font-size: 12px;
+  }
+  .office-title > svg {
+    width: 18px;
+  }
+}

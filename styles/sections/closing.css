@@ -1,0 +1,94 @@
+/* sections/closing styles, including responsive overrides. */
+
+.closing {
+  background: var(--cream);
+  padding: 65px 0;
+  position: relative;
+  overflow: hidden;
+}
+.closing:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  background: #c9a24b18;
+  pointer-events: none;
+}
+.closing > .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.closing h2 {
+  font: 400 clamp(40px, 5.5vw, 82px)/1.1 Inter;
+  letter-spacing: -3px;
+  color: var(--navy);
+  margin: 0;
+}
+.closing h2 > span {
+  color: #93805b;
+}
+.closing .eyebrow {
+  font-size: 12px;
+  letter-spacing: 1.7px;
+  margin-bottom: 24px;
+}
+.closing a {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #bca775;
+  color: var(--navy);
+  border-radius: 50%;
+  transition:
+    background 0.4s,
+    transform 0.5s,
+    color 0.4s;
+}
+.closing a:hover {
+  background: var(--navy);
+  color: white;
+  transform: rotate(5deg);
+}
+@media (max-width: 900px) {
+  .closing a {
+    width: 80px;
+    height: 80px;
+  }
+  .closing h2 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 600px) {
+  .closing {
+    padding: 45px 0;
+  }
+  .closing .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  .closing h2 {
+    font-size: 39px;
+    letter-spacing: -1.8px;
+    line-height: 1.15;
+    max-width: 270px;
+  }
+  .closing a {
+    width: 53px;
+    height: 53px;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+  .closing a svg {
+    width: 25px;
+  }
+  .closing > .wrap {
+    align-items: flex-end;
+  }
+}

@@ -1,0 +1,293 @@
+/* base styles, including responsive overrides. */
+
+:root {
+  --navy: #0b1f4b;
+  --midnight: #06182f;
+  --gold: #c9a24b;
+  --ink: #202b3a;
+  --grey: #657080;
+  --cream: #f6f3eb;
+  --reading-progress: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+body {
+  margin: 0;
+  color: var(--ink);
+  font:
+    14px/1.75 Inter,
+    Arial,
+    sans-serif;
+  background: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.15;
+}
+h2 {
+  font-size: clamp(36px, 3.8vw, 58px);
+  letter-spacing: -2.3px;
+  color: var(--navy);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+h3 {
+  font-weight: 500;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+a {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+.wrap {
+  width: min(1320px, calc(100% - 112px));
+  margin: auto;
+}
+.section {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+.muted-heading {
+  color: #7f8994;
+}
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 27px;
+  line-height: 1.6;
+}
+.eyebrow > span {
+  width: 27px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+.eyebrow > small {
+  color: #89909b;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  margin-left: 18px;
+}
+.button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  min-height: 53px;
+  padding: 15px 24px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  transition:
+    color 0.3s,
+    border-color 0.3s;
+}
+.button:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  transform: translateY(101%);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: -1;
+}
+.button:hover:before {
+  transform: translateY(0);
+}
+.button svg {
+  transition: transform 0.3s;
+}
+.button:hover svg {
+  transform: translate(3px, -3px);
+}
+.button.navy {
+  background: var(--navy);
+  color: white;
+}
+.button.navy:hover {
+  color: var(--navy);
+  border-color: var(--navy);
+}
+.button.gold {
+  background: var(--gold);
+  color: #10203c;
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  padding: 12px 0;
+  position: relative;
+}
+.text-link:after {
+  content: '';
+  height: 1px;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  background: currentColor;
+  opacity: 0.4;
+  transform: scaleX(0.2);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+.text-link:hover:after {
+  transform: scaleX(1);
+}
+.text-link svg {
+  transition: transform 0.3s;
+}
+.text-link:hover svg {
+  transform: translate(3px, -3px);
+}
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 65px;
+  margin-bottom: 48px;
+}
+.section-head h2 {
+  margin-bottom: 0;
+}
+.section-head > p {
+  max-width: 300px;
+  font-size: 16px;
+  color: var(--grey);
+  margin: 0 0 5px;
+  line-height: 1.9;
+}
+.small {
+  font-size: 13px !important;
+}
+.skip {
+  position: fixed;
+  top: -80px;
+  left: 10px;
+  z-index: 100;
+  background: white;
+  padding: 12px;
+}
+.skip:focus {
+  top: 10px;
+}
+@media (max-width: 1150px) {
+  .wrap {
+    width: calc(100% - 64px);
+  }
+  .section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  .section-head {
+    gap: 35px;
+  }
+  .section-head > p {
+    max-width: 260px;
+  }
+}
+@media (max-width: 900px) {
+  .section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  .section-head h2 {
+    font-size: 40px;
+  }
+  .section-head > p {
+    max-width: 220px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 90px;
+  }
+  .wrap {
+    width: calc(100% - 40px);
+  }
+  .button {
+    font-size: 13px;
+    gap: 16px;
+    padding: 13px 17px;
+    min-height: 49px;
+  }
+  .section {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  h2 {
+    font-size: 36px;
+    letter-spacing: -1.6px;
+    line-height: 1.15;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 1.4px;
+    margin-bottom: 22px;
+    gap: 10px;
+  }
+  .eyebrow > small {
+    font-size: 11px;
+    margin-left: auto;
+    letter-spacing: 0.5px;
+  }
+  .eyebrow > span {
+    width: 20px;
+  }
+  .text-link {
+    font-size: 12px;
+  }
+  .section-head {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .section-head h2 {
+    font-size: 36px;
+  }
+  .section-head > p {
+    max-width: none;
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+}

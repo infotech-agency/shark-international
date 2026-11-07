@@ -1,0 +1,24 @@
+/* shared/dialog styles, including responsive overrides. */
+dialog {
+  border: 0;
+  padding: 45px;
+  max-width: 550px;
+  width: calc(100% - 40px);
+  box-shadow: 0 15px 80px #0003;
+  animation: soft-in 0.3s ease both;
+}
+dialog::backdrop {
+  background: #071831b0;
+}
+dialog h2 {
+  font-size: 28px;
+}
+dialog p,
+dialog a {
+  font-size: 16px;
+}
+.dialog-close {
+  float: right;
+  background: none;
+  border: 0;
+}

@@ -1,0 +1,272 @@
+/* sections/contact styles, including responsive overrides. */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 5px;
+}
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 95px;
+}
+.contact-copy {
+  position: sticky;
+  top: 120px;
+  align-self: start;
+}
+.contact-copy h2 {
+  font-size: clamp(35px, 3.4vw, 51px);
+  line-height: 1.2;
+}
+.contact-copy > p:not(.eyebrow) {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--grey);
+  max-width: 340px;
+}
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 29px;
+  color: var(--navy);
+}
+.contact-line > svg {
+  padding: 12px;
+  box-sizing: content-box;
+  border: 1px solid #dde3e9;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+.contact-line:hover > svg {
+  background: var(--navy);
+  color: white;
+}
+.contact-line > span {
+  font-size: 12px;
+  color: var(--grey);
+}
+.contact-line strong {
+  display: block;
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.contact-rule {
+  width: 45px;
+  height: 1px;
+  background: var(--gold);
+  margin: 35px 0 24px;
+}
+.contact form {
+  background: #f4f6f8;
+  padding: 35px;
+  position: relative;
+}
+.contact form:before {
+  content: '';
+  position: absolute;
+  width: 55px;
+  left: 35px;
+  top: 0;
+  height: 2px;
+  background: var(--gold);
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 18px;
+}
+label {
+  font-size: 13px;
+  color: var(--navy);
+  font-weight: 500;
+}
+label > span {
+  color: #997932;
+}
+label small {
+  font-weight: 400;
+  color: var(--grey);
+}
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #d7dfe7;
+  border-radius: 0;
+  margin-top: 7px;
+  background: #fff;
+  font-size: 16px;
+  color: var(--ink);
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #b19352;
+  box-shadow: 0 0 0 2px #c9a24b15;
+}
+textarea {
+  resize: vertical;
+}
+.full {
+  grid-column: 1/-1;
+}
+.form-note {
+  font-size: 13px;
+  color: var(--grey);
+  margin: 20px 0;
+}
+.email-alternative {
+  font-size: 13px;
+  margin-left: 18px;
+  text-decoration: underline;
+}
+.notice {
+  font-size: 15px;
+  color: var(--navy);
+  margin-top: 15px;
+}
+.honey,
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+@media (max-width: 1150px) {
+  .contact {
+    gap: 55px;
+  }
+  .contact form {
+    padding: 26px;
+  }
+  .contact form:before {
+    left: 26px;
+  }
+}
+@media (max-width: 900px) {
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .contact-copy {
+    position: static;
+  }
+  .contact-copy h2 br {
+    display: none;
+  }
+  .contact-copy > p:not(.eyebrow) {
+    max-width: 500px;
+  }
+  .contact-line {
+    display: inline-flex;
+    margin-right: 25px;
+    margin-top: 12px;
+  }
+  .contact-rule,
+  .contact-copy > .small {
+    display: none;
+  }
+  .contact form {
+    padding: 35px;
+  }
+  .form-grid label {
+    font-size: 15px;
+  }
+  .contact-line strong {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .contact {
+    display: block;
+  }
+  .contact-copy {
+    margin-bottom: 30px;
+  }
+  .contact-copy h2,
+  .contact-copy h2 > span {
+    font-size: 37px;
+  }
+  .contact-copy h2 br {
+    display: block;
+  }
+  .contact-copy > p:not(.eyebrow) {
+    font-size: 15px;
+    max-width: 330px;
+  }
+  .contact-line {
+    display: flex;
+    margin: 23px 0 0;
+  }
+  .contact-line > svg {
+    width: 17px;
+    height: 17px;
+    padding: 10px;
+  }
+  .contact-line > span {
+    font-size: 12px;
+  }
+  .contact-line strong {
+    font-size: 13px;
+  }
+  .contact form {
+    padding: 26px 20px;
+  }
+  .contact form:before {
+    left: 20px;
+  }
+  .form-grid {
+    gap: 18px 13px;
+  }
+  .form-grid label {
+    font-size: 12px;
+  }
+  .form-grid input,
+  .form-grid select {
+    font-size: 15px;
+    min-height: 45px;
+    padding: 11px;
+  }
+  .form-grid label:nth-child(-n + 4) {
+    grid-column: 1/-1;
+  }
+  .form-note {
+    font-size: 12px;
+    margin: 19px 0;
+  }
+  .email-alternative {
+    display: inline-block;
+    margin: 17px 0 0 13px;
+    font-size: 12px;
+  }
+  .contact form .button {
+    font-size: 12px;
+    gap: 15px;
+  }
+}

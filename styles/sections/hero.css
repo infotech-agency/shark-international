@@ -1,0 +1,230 @@
+.hero {
+  position: relative;
+  background: #071e36;
+  color: white;
+  min-height: 760px;
+  overflow: hidden;
+}
+.hero > .hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-position: center 57%;
+  animation: hero-image-in 1.8s ease-out both;
+}
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #04172de8 0%, #04172dbf 38%, #04172d40 75%),
+    linear-gradient(0deg, #04172d80, transparent 65%);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 80px;
+  padding-bottom: 150px;
+}
+.hero-content > .eyebrow {
+  font-size: 12px;
+  color: #f2d398;
+  letter-spacing: 1.5px;
+  margin-bottom: 28px;
+}
+.hero h1 {
+  font-family: Michroma, Arial, sans-serif;
+  font-size: clamp(40px, 4.5vw, 66px);
+  line-height: 1.4;
+  letter-spacing: -1.5px;
+  font-weight: 400;
+  max-width: 1000px;
+  margin: 0 0 25px;
+}
+.hero-line {
+  display: block;
+  overflow: hidden;
+}
+.hero-line > span {
+  display: block;
+  animation: line-in 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.hero-accent {
+  font-size: 0.58em;
+  line-height: 1.7;
+  color: #ebcc90;
+  margin-top: 7px;
+  letter-spacing: -0.7px;
+}
+.hero-accent > span {
+  animation-delay: 0.18s;
+}
+.hero-copy {
+  font-size: 17px;
+  line-height: 1.85;
+  max-width: 610px;
+  color: #edf2f6;
+  margin: 0 0 30px;
+}
+.actions {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.hero-outline {
+  border-color: #ffffff80;
+  color: white;
+  background: #06182f25;
+}
+.hero-outline:hover {
+  color: #0b1f4b;
+}
+.hero .button {
+  font-size: 14px;
+  min-height: 57px;
+  padding: 16px 25px;
+  gap: 25px;
+}
+.hero .scroll-cue {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 35px;
+  font-size: 13px;
+  color: #e1e9f1;
+  width: fit-content;
+}
+.hero .scroll-cue svg {
+  animation: scroll-cue-in 2s ease 3;
+}
+.hero-enter {
+  animation: soft-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+.hero-office-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  border-top: 1px solid #ffffff3b;
+  background: #06182f80;
+  backdrop-filter: blur(7px);
+}
+.hero-office-bar > .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 23px 0;
+  font-size: 13px;
+  color: #fff;
+}
+.hero-office-bar > .wrap > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.location-dot {
+  height: 6px;
+  width: 6px;
+  background: #e0b96b;
+  border-radius: 50%;
+  display: inline-block;
+}
+@media (min-width: 1650px) {
+  .hero {
+    min-height: 850px;
+  }
+  .hero-content {
+    padding-top: 110px;
+  }
+  .hero h1 {
+    font-size: 73px;
+  }
+}
+@media (max-width: 1100px) {
+  .hero h1 {
+    font-size: 49px;
+  }
+  .hero {
+    min-height: 730px;
+  }
+  .hero-copy {
+    max-width: 580px;
+  }
+  .hero-office-bar > .wrap {
+    gap: 15px;
+    font-size: 12px;
+  }
+  .hero-office-bar > .wrap > span:first-child {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    min-height: 755px;
+  }
+  .hero-content {
+    padding-top: 55px;
+    padding-bottom: 150px;
+  }
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.55;
+    letter-spacing: -0.8px;
+  }
+  .hero-accent {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-top: 12px;
+    letter-spacing: -0.4px;
+  }
+  .hero-content > .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+  }
+  .hero-copy {
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 26px;
+    max-width: 350px;
+  }
+  .hero-shade {
+    background:
+      linear-gradient(90deg, #04172ded, #04172d88), linear-gradient(0deg, #04172d80, transparent);
+  }
+  .hero > .hero-image {
+    object-position: 58% 55%;
+  }
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .hero .button {
+    min-height: 49px;
+    padding: 13px 20px;
+    font-size: 13px;
+    gap: 20px;
+  }
+  .hero .scroll-cue {
+    font-size: 12px;
+    margin-top: 24px;
+  }
+  .hero-office-bar > .wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 17px 0;
+    gap: 10px;
+    font-size: 11px;
+  }
+  .hero-office-bar > .wrap > span:last-child {
+    grid-column: 1/-1;
+    font-size: 10px;
+    color: #c6d1dd;
+  }
+  .hero-office-bar > .wrap > div {
+    gap: 7px;
+  }
+}

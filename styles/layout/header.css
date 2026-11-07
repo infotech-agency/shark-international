@@ -1,0 +1,152 @@
+/* layout/header styles, including responsive overrides. */
+.header {
+  position: sticky;
+  top: -32px;
+  z-index: 50;
+  background: #fff;
+  border-bottom: 1px solid #e7e8ec;
+}
+.utility {
+  height: 32px;
+  background: var(--midnight);
+  color: #c0c9d6;
+  font-size: 12px;
+}
+.utility .wrap,
+.utility span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 20px;
+}
+.utility i,
+.hero-bottom i {
+  height: 10px;
+  width: 1px;
+  background: #ffffff35;
+  display: inline-block;
+}
+.nav {
+  height: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  transition: height 0.35s;
+}
+.compact .nav {
+  height: 78px;
+}
+.logo {
+  width: 205px;
+  height: auto;
+  transition: width 0.35s;
+}
+.compact .logo {
+  width: 179px;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.links > a:not(.button) {
+  position: relative;
+  padding: 15px 0;
+  white-space: nowrap;
+}
+.links > a:not(.button):after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  height: 1px;
+  background: var(--gold);
+  transition: transform 0.3s;
+}
+.links > a.active:after,
+.links > a:hover:after {
+  transform: scaleX(1);
+}
+.menu {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--navy);
+  padding: 12px;
+}
+@media (max-width: 1150px) {
+  .links {
+    gap: 18px;
+    font-size: 13px;
+  }
+  .logo {
+    width: 175px;
+  }
+  .nav {
+    gap: 20px;
+    height: 88px;
+  }
+  .nav .button {
+    padding: 12px 15px;
+    gap: 14px;
+    min-height: 47px;
+  }
+}
+@media (max-width: 900px) {
+  .links {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .links.open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px 32px 30px;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 0 12px 20px #0001;
+    font-size: 16px;
+    gap: 0;
+    animation: soft-in 0.3s ease;
+  }
+  .links.open > a {
+    min-height: 45px;
+  }
+  .nav {
+    height: 82px;
+  }
+  .compact .nav {
+    height: 74px;
+  }
+  .compact .logo {
+    width: 170px;
+  }
+}
+@media (max-width: 600px) {
+  .utility {
+    display: none;
+  }
+  .header {
+    top: 0;
+  }
+  .nav,
+  .compact .nav {
+    height: 75px;
+  }
+  .logo,
+  .compact .logo {
+    width: 166px;
+  }
+}
