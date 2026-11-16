@@ -55,6 +55,7 @@ export function HeroSection() {
               <ArrowUpRight size={20} />
             </a>
           </div> */}
+          <p className='my-2'>Sourcing and trading essential products for agricultural, industrial and manufacturing requirements.</p>
 <p
   className="hero-locations hero-enter"
   style={{
@@ -76,6 +77,7 @@ export function HeroSection() {
     WebkitBackdropFilter: 'blur(8px)',
   }}
 >
+  
   <span style={{ color: 'inherit' }}>New Delhi, India</span>
   <span aria-hidden="true" style={{ color: '#D9B66F' }}>·</span>
 
@@ -87,7 +89,7 @@ export function HeroSection() {
 
 
 </p>
-<p className='my-2'>Sourcing and trading essential products for agricultural, industrial and manufacturing requirements.</p>
+
           
         </div>
       </div>
